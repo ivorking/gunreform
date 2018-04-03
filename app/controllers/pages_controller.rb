@@ -5,4 +5,10 @@ class PagesController < ApplicationController
   def blogs
   end
 
+  def donations
+  end
+
+  def visualiser
+  end
+
 end

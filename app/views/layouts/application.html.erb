@@ -1,23 +1,30 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Gunreform</title>
-    <%= csrf_meta_tags %>
+<html lang="en">
 
+<head>
+    <title>Gun Policy Reform</title>
+    <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
+<body>
+
     <nav>
-      <%= link_to 'Home', root_path %>
-      <% if @current_user.present? %>
-        <%= link_to "Sign out #{ @current_user.email }", login_path, :method => 'delete' %>
-      <% else %>
-        <%= link_to 'Sign Up', new_user_path %>
-        <%= link_to 'Sign In', login_path %>
-      <% end %>
+        <%= link_to 'Home', root_path %>
+        <%= link_to 'Funding Visualiser', visualiser_path %>
+        <%= link_to 'Donations', donations_path %>
+        <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>.
+          <%= link_to 'Edit Profile', edit_user_registration_path, :class => 'navbar-link' %> |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+        <% else %>
+          <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link'  %> |
+          <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+        <% end %>
     </nav>
+
+    <h1>Gun Policy Reform</h1>
 
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
@@ -25,6 +32,8 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
+
     <%= yield %>
-  </body>
+
+</body>
 </html>

@@ -1,5 +1,5 @@
 // Variables
-$brand-color: red;
+$brand-color: lightgray;
 
 // Mixins (like functions)
 @mixin coloredBG {
@@ -17,6 +17,15 @@ body {
 
 h1 {
     text-align: center;
+}
+  
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+a {
+    color: rgb(27, 31, 248);
 }
 
 .notification {
@@ -62,4 +71,35 @@ h1 {
         padding: 1em;
         border-radius: 0.5em;
     }
+}
+
+nav {
+    list-style: none;
+    margin: 0 5px;
+    padding: 10px;
+    display: flex;
+    background-color: rgb(223, 221, 221);
+    justify-content: space-around;
+    border-radius: 25px;
+    font-family: 'Port Lligat Slab', serif;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.cover_font {
+    font-family: 'Sunshiney', cursive;
+    font-size: 2.5em;
+}
+
+.scroller {
+    font-family: 'Port Lligat Slab', serif;
+    margin-top: 40px;
+    font-size: 30px;
+    color: black;
+}
+
+input:focus {
+    background-color: rgb(217, 242, 250);
 }
