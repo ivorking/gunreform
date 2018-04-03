@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get '/blogs' => 'pages#blogs'
   get '/visualiser' => 'pages#visualiser'
   get '/donations' => 'pages#donations'
+  get '/selector' => 'pages#selector'
+  get '/pages/display_selection' => 'pages#display_selection'
   post '/users' => 'pages#home'
 
   # resources :users, :only => [:new, :create]
