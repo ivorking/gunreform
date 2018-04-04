@@ -2,4 +2,8 @@
   Welcome back <%= @current_user.email %>
 <% end %>
 
-The politician you are tracking is: <%= @var_selected %>
+<p>This site has been built to support gun control and law reform efforts in the USA, Australia and South Africa.</p>
+
+<% if @var_selected != nil%>
+<p>The politician you are tracking is: <%= @var_selected %></p>
+<% end %>

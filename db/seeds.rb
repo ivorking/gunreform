@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke ', movie: movies.first)
 
 User.destroy_all
-User.create(user_name: 'Steve Muggins', donation_amount: '50.21')
-User.create(user_name: 'Banjo Paterson', donation_amount: '35.70')
+User.create(user_name: 'Steve Muggins', donation_amount: '50.21', :password => 'chicken', email: 'ivorking@gmail.com')
+User.create(user_name: 'Banjo Paterson', donation_amount: '35.70', :password => 'chicken', email: 'boggins@gmail.com')
 
 Pol.destroy_all
 Pol.create(name_first: 'STEVE', name_last: 'STEVE', party: 'Democrats', NRA_rating: 'A+', house: 'Senate')
