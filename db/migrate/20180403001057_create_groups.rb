@@ -3,8 +3,8 @@ class CreateGroups < ActiveRecord::Migration[5.1]
     create_table :groups do |t|
       t.text :lg_name
       t.text :size
-      t.float :budget
-
+      t.integer :budget
+      t.text :polarity
       t.timestamps
     end
   end

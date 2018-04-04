@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180403205717) do
+ActiveRecord::Schema.define(version: 20180403051314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,8 @@ ActiveRecord::Schema.define(version: 20180403205717) do
   create_table "groups", force: :cascade do |t|
     t.text "lg_name"
     t.text "size"
-    t.float "budget"
+    t.integer "budget"
+    t.text "polarity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,13 +31,13 @@ ActiveRecord::Schema.define(version: 20180403205717) do
 
   create_table "pols", force: :cascade do |t|
     t.text "name_first"
+    t.text "name_last"
     t.text "party"
     t.text "NRA_rating"
     t.text "house"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "state_id"
-    t.text "name_last"
   end
 
   create_table "pols_users", force: :cascade do |t|
@@ -49,17 +50,17 @@ ActiveRecord::Schema.define(version: 20180403205717) do
     t.text "gun_control_rating"
     t.boolean "handg_bans"
     t.boolean "assaultw_bans"
+    t.boolean "bump_bans"
     t.boolean "background_checks"
     t.integer "min_age"
-    t.boolean "bump_bans"
-    t.boolean "open_carry"
+    t.boolean "open_carry_ok"
+    t.boolean "concealed_carry_ok"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.text "user_name"
-    t.text "following"
     t.float "donation_amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

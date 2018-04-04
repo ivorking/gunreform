@@ -18,20 +18,36 @@ class PagesController < ApplicationController
   end
 
   def display_selection
-    @matchvar = false
+
     @name1 = params[:name1].upcase!
-    @name2 = params[:name2].upcase!
-
-    @PolArray = Pol.all.map {|e| e.attributes.values}
-
-    @PolArray.each_with_index do | key, value |
-      if @PolArray[value][1].upcase == @name1
-        # if @PolArray[value][8].upcase == @name2
-          @user = current_user
-          # @user.Pol << Pols.id 
-        # end
-        binding.pry
-      end
+    if @name1 == nil
+      @name1 = "test"
     end
+    @name2 = params[:name2].upcase!
+    if @name2 == nil
+      @name2 = "test"
+    end
+
+    @namechosen = @name1 + " " + @name2
+
+    @pol = Pol.find_by :name => @namechosen
+    if @pol != nil
+      @user.pols << @pol
+    else
+      @outputmsg = "No match found in the politician database!"
+    end 
+
+    # @PolArray = Pol.all.map {|e| e.attributes.values}
+
+
+
+    # @PolArray.each_with_index do | key, value |
+    #   if @PolArray[value][1].upcase == @name1
+    #     # if @PolArray[value][8].upcase == @name2
+    #       @user = current_user
+    #       @user.pols << Pol.find(value)
+    #     # end
+    #     binding.pry
+    #   end
   end
 end
