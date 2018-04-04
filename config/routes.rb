@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/visualiser' => 'pages#visualiser'
   get '/donations' => 'pages#donations'
   get '/selector' => 'pages#selector'
+  get '/grid' => 'pages#grid'
   get '/pages/display_selection' => 'pages#display_selection'
   post '/users' => 'pages#home'
 

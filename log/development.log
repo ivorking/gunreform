@@ -3894,3 +3894,849 @@ Processing by PagesController#display_selection as HTML
 Completed 200 OK in 195220ms (Views: 2021.7ms | ActiveRecord: 6.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-04 09:20:06 +1000
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/ivor/Repos/gunreform/app/controllers/pages_controller.rb:24: `@' without identifiers is not allowed as an instance variable name
+/home/ivor/Repos/gunreform/app/controllers/pages_controller.rb:24: syntax error, unexpected end-of-input):
+  
+app/controllers/pages_controller.rb:24: `@' without identifiers is not allowed as an instance variable name
+app/controllers/pages_controller.rb:24: syntax error, unexpected end-of-input
+Started GET "/" for 127.0.0.1 at 2018-04-04 09:20:22 +1000
+  
+SyntaxError (/home/ivor/Repos/gunreform/app/controllers/pages_controller.rb:27: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/pages_controller.rb:27: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-04-04 09:20:24 +1000
+  
+SyntaxError (/home/ivor/Repos/gunreform/app/controllers/pages_controller.rb:27: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/pages_controller.rb:27: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-04-04 09:20:44 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 201ms (Views: 169.4ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 09:20:47 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 16.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pages/display_selection?name1=steve&name2=biggins" for 127.0.0.1 at 2018-04-04 09:20:53 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"steve", "name2"=>"biggins"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPol Load (0.9ms)[0m  [1m[34mSELECT "pols".* FROM "pols"[0m
+  Rendering pages/display_selection.html.erb within layouts/application
+  Rendered pages/display_selection.html.erb within layouts/application (1845.4ms)
+Completed 200 OK in 1212404ms (Views: 1880.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-04 09:41:18 +1000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/ivor/Repos/gunreform/app/controllers/pages_controller.rb:23: syntax error, unexpected keyword_do, expecting keyword_end
+  @PolArray do | value |
+              ^
+/home/ivor/Repos/gunreform/app/controllers/pages_controller.rb:28: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/pages_controller.rb:23: syntax error, unexpected keyword_do, expecting keyword_end
+app/controllers/pages_controller.rb:28: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 09:41:42 +1000
+  
+SyntaxError (/home/ivor/Repos/gunreform/app/controllers/pages_controller.rb:28: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/pages_controller.rb:28: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/pages/display_selection?name1=steve&name2=biggins" for 127.0.0.1 at 2018-04-04 09:42:07 +1000
+  
+SyntaxError (/home/ivor/Repos/gunreform/app/controllers/pages_controller.rb:28: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/pages_controller.rb:28: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-04-04 09:42:44 +1000
+  
+SyntaxError (/home/ivor/Repos/gunreform/app/controllers/pages_controller.rb:27: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/pages_controller.rb:27: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-04-04 09:44:23 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 177ms (Views: 151.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 09:44:25 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 16.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pages/display_selection?name1=sdf&name2=ssss" for 127.0.0.1 at 2018-04-04 09:44:30 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"sdf", "name2"=>"ssss"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPol Load (0.4ms)[0m  [1m[34mSELECT "pols".* FROM "pols"[0m
+Completed 500 Internal Server Error in 83387ms (ActiveRecord: 3.8ms)
+
+
+  
+TypeError (no implicit conversion of Array into Integer):
+  
+app/controllers/pages_controller.rb:25:in `[]'
+app/controllers/pages_controller.rb:25:in `block in display_selection'
+app/controllers/pages_controller.rb:24:in `each'
+app/controllers/pages_controller.rb:24:in `display_selection'
+Started GET "/" for 127.0.0.1 at 2018-04-04 09:51:39 +1000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 210ms (Views: 176.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 09:51:40 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/display_selection?name1=johnson&name2=muig" for 127.0.0.1 at 2018-04-04 09:51:46 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"johnson", "name2"=>"muig"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPol Load (0.3ms)[0m  [1m[34mSELECT "pols".* FROM "pols"[0m
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.9ms)
+
+
+  
+TypeError (no implicit conversion of Array into Integer):
+  
+app/controllers/pages_controller.rb:25:in `[]'
+app/controllers/pages_controller.rb:25:in `block in display_selection'
+app/controllers/pages_controller.rb:24:in `each'
+app/controllers/pages_controller.rb:24:in `display_selection'
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 09:52:45 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 45ms (Views: 15.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/pages/display_selection?name1=Johnson&name2=sdf" for 127.0.0.1 at 2018-04-04 09:52:50 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"Johnson", "name2"=>"sdf"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPol Load (0.3ms)[0m  [1m[34mSELECT "pols".* FROM "pols"[0m
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 3.8ms)
+
+
+  
+TypeError (no implicit conversion of Array into Integer):
+  
+app/controllers/pages_controller.rb:25:in `[]'
+app/controllers/pages_controller.rb:25:in `block in display_selection'
+app/controllers/pages_controller.rb:24:in `each'
+app/controllers/pages_controller.rb:24:in `display_selection'
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 09:53:26 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 47ms (Views: 19.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 09:53:27 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 24ms (Views: 13.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/display_selection?name1=Johnson&name2=afs" for 127.0.0.1 at 2018-04-04 09:53:32 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"Johnson", "name2"=>"afs"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPol Load (0.2ms)[0m  [1m[34mSELECT "pols".* FROM "pols"[0m
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 2.7ms)
+
+
+  
+TypeError (no implicit conversion of Array into Integer):
+  
+app/controllers/pages_controller.rb:25:in `[]'
+app/controllers/pages_controller.rb:25:in `block in display_selection'
+app/controllers/pages_controller.rb:24:in `each'
+app/controllers/pages_controller.rb:24:in `display_selection'
+Started GET "/" for 127.0.0.1 at 2018-04-04 09:54:44 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 41ms (Views: 16.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 09:54:45 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 15.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pages/display_selection?name1=Johnson&name2=test" for 127.0.0.1 at 2018-04-04 09:54:50 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"Johnson", "name2"=>"test"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPol Load (0.2ms)[0m  [1m[34mSELECT "pols".* FROM "pols"[0m
+Completed 500 Internal Server Error in 88890ms (ActiveRecord: 2.3ms)
+
+
+  
+TypeError (no implicit conversion of Array into Integer):
+  
+app/controllers/pages_controller.rb:25:in `[]'
+app/controllers/pages_controller.rb:25:in `block in display_selection'
+app/controllers/pages_controller.rb:24:in `each'
+app/controllers/pages_controller.rb:24:in `display_selection'
+Started GET "/" for 127.0.0.1 at 2018-04-04 09:58:47 +1000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 192ms (Views: 160.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 09:58:49 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 16.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pages/display_selection?name1=johnson&name2=tst" for 127.0.0.1 at 2018-04-04 09:58:56 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"johnson", "name2"=>"tst"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPol Load (0.4ms)[0m  [1m[34mSELECT "pols".* FROM "pols"[0m
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 3.1ms)
+
+
+  
+TypeError (no implicit conversion of Array into Integer):
+  
+app/controllers/pages_controller.rb:25:in `[]'
+app/controllers/pages_controller.rb:25:in `block in display_selection'
+app/controllers/pages_controller.rb:24:in `each'
+app/controllers/pages_controller.rb:24:in `each_with_index'
+app/controllers/pages_controller.rb:24:in `display_selection'
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 10:02:25 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 51ms (Views: 15.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/pages/display_selection?name1=Johnson&name2=test" for 127.0.0.1 at 2018-04-04 10:02:34 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"Johnson", "name2"=>"test"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPol Load (0.3ms)[0m  [1m[34mSELECT "pols".* FROM "pols"[0m
+Started GET "/" for 127.0.0.1 at 2018-04-04 10:39:02 +1000
+  Rendering pages/display_selection.html.erb within layouts/application
+  Rendered pages/display_selection.html.erb within layouts/application (8116.8ms)
+Completed 200 OK in 3025525ms (Views: 8160.5ms | ActiveRecord: 3.0ms)
+
+
+Processing by PagesController#home as HTML
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 10:53:00 +1000
+Started GET "/" for 127.0.0.1 at 2018-04-04 10:53:00 +1000
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 43ms (Views: 15.2ms | ActiveRecord: 3.1ms)
+
+
+Processing by PagesController#home as HTML
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 60ms (Views: 31.4ms | ActiveRecord: 2.8ms)
+
+
+Completed 200 OK in 75ms (Views: 22.5ms | ActiveRecord: 29.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-04 10:53:39 +1000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 213ms (Views: 176.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 10:53:49 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 41ms (Views: 15.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pages/display_selection?name1=johnson&name2=" for 127.0.0.1 at 2018-04-04 10:53:55 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"johnson", "name2"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPol Load (0.4ms)[0m  [1m[34mSELECT "pols".* FROM "pols"[0m
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 3.7ms)
+
+
+  
+NoMethodError (undefined method `upcase' for nil:NilClass):
+  
+app/controllers/pages_controller.rb:26:in `block in display_selection'
+app/controllers/pages_controller.rb:24:in `each'
+app/controllers/pages_controller.rb:24:in `each_with_index'
+app/controllers/pages_controller.rb:24:in `display_selection'
+Started GET "/pages/display_selection?name1=johnson&name2=sdf" for 127.0.0.1 at 2018-04-04 10:54:07 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"johnson", "name2"=>"sdf"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPol Load (0.3ms)[0m  [1m[34mSELECT "pols".* FROM "pols"[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `upcase' for nil:NilClass):
+  
+app/controllers/pages_controller.rb:26:in `block in display_selection'
+app/controllers/pages_controller.rb:24:in `each'
+app/controllers/pages_controller.rb:24:in `each_with_index'
+app/controllers/pages_controller.rb:24:in `display_selection'
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 10:54:10 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 49ms (Views: 16.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pages/display_selection?name1=Johnson&name2=sdf" for 127.0.0.1 at 2018-04-04 10:54:20 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"Johnson", "name2"=>"sdf"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPol Load (0.2ms)[0m  [1m[34mSELECT "pols".* FROM "pols"[0m
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `upcase' for nil:NilClass):
+  
+app/controllers/pages_controller.rb:26:in `block in display_selection'
+app/controllers/pages_controller.rb:24:in `each'
+app/controllers/pages_controller.rb:24:in `each_with_index'
+app/controllers/pages_controller.rb:24:in `display_selection'
+Started GET "/pages/display_selection?name1=Johnson&name2=sdf" for 127.0.0.1 at 2018-04-04 10:54:58 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"Johnson", "name2"=>"sdf"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPol Load (0.3ms)[0m  [1m[34mSELECT "pols".* FROM "pols"[0m
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 5.0ms)
+
+
+  
+NoMethodError (undefined method `upcase' for nil:NilClass):
+  
+app/controllers/pages_controller.rb:26:in `block in display_selection'
+app/controllers/pages_controller.rb:24:in `each'
+app/controllers/pages_controller.rb:24:in `each_with_index'
+app/controllers/pages_controller.rb:24:in `display_selection'
+Started GET "/pages/display_selection?name1=Johnson&name2=sdf" for 127.0.0.1 at 2018-04-04 10:55:47 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"Johnson", "name2"=>"sdf"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPol Load (0.2ms)[0m  [1m[34mSELECT "pols".* FROM "pols"[0m
+  [1m[36mCACHE Pol Load (0.0ms)[0m  [1m[34mSELECT "pols".* FROM "pols"[0m
+  Rendering pages/display_selection.html.erb within layouts/application
+  Rendered pages/display_selection.html.erb within layouts/application (9230.5ms)
+Completed 200 OK in 408185ms (Views: 9253.8ms | ActiveRecord: 4.9ms)
+
+
+  [1m[36mPol Load (0.3ms)[0m  [1m[34mSELECT "pols".* FROM "pols"[0m
+  [1m[36mState Load (0.9ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+Started GET "/" for 127.0.0.1 at 2018-04-04 11:27:25 +1000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 191ms (Views: 157.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 11:27:27 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/display_selection?name1=Johnson&name2=" for 127.0.0.1 at 2018-04-04 11:27:32 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"Johnson", "name2"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPol Load (0.4ms)[0m  [1m[34mSELECT "pols".* FROM "pols"[0m
+  Rendering pages/display_selection.html.erb within layouts/application
+  Rendered pages/display_selection.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 94303ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of nil into String):
+    1: The politician you are tracking is: <%= @name1 + " " + @name2 %>
+    2: <% binding.pry %>
+  
+app/views/pages/display_selection.html.erb:1:in `+'
+app/views/pages/display_selection.html.erb:1:in `_app_views_pages_display_selection_html_erb__3923488210063899912_70008705135880'
+Started GET "/" for 127.0.0.1 at 2018-04-04 11:29:18 +1000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 192ms (Views: 152.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-04 11:29:19 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 14.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-04 11:29:21 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dGE2r6efZa2ypyS3WbeHcz6i+gTKscBLmBu9SYm6on97dzB9dHI67/4SLvBbk9Us8kjBmDdjBCPg9+yy2C1Fug=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-04 11:29:21 +1000
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-04 11:29:21 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 38ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-04 11:29:33 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VYynwln/lSyfaAUIz6HW0sHvBAp5WJUSmMqw5cksSlNsbUZ834ccCnXPg2zZndJZmx3dbl+Vw7yR6uQgiJZF9Q==", "user"=>{"email"=>"ivorking@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "ivorking@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-04-04 01:29:33.310547"], ["last_sign_in_at", "2018-04-03 13:17:04.709208"], ["sign_in_count", 4], ["updated_at", "2018-04-04 01:29:33.311216"], ["id", 3]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 142ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-04 11:29:33 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 11:29:38 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 41ms (Views: 16.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pages/display_selection?name1=Johnson&name2=" for 127.0.0.1 at 2018-04-04 11:29:42 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"Johnson", "name2"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPol Load (0.3ms)[0m  [1m[34mSELECT "pols".* FROM "pols"[0m
+  Rendering pages/display_selection.html.erb within layouts/application
+  Rendered pages/display_selection.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 241827ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of nil into String):
+    1: The politician you are tracking is: <%= @name1 + " " + @name2 %>
+    2: <% binding.pry %>
+  
+app/views/pages/display_selection.html.erb:1:in `+'
+app/views/pages/display_selection.html.erb:1:in `_app_views_pages_display_selection_html_erb___1430460900660420022_69954851681980'
+Started GET "/" for 127.0.0.1 at 2018-04-04 11:42:02 +1000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4385ms (Views: 4350.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 11:42:12 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 55ms (Views: 24.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-04 11:42:15 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 50ms (Views: 22.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 11:43:40 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 19.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 11:45:30 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 50ms (Views: 23.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-04 11:45:33 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 36ms (Views: 24.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-04 11:45:35 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 44ms (Views: 21.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-04 11:47:55 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 50ms (Views: 22.6ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-04 11:47:57 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kypPpvY2iIT5hZnpdoI2waN5gjTRG59aFYUKxtNXkpB7tUgeMSdXSoy7oDuFr80eBDj57iTJaebcWSQxhegkfQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-04 11:47:57 +1000
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-04 11:47:57 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 47ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-04 11:48:02 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 51ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-04 11:48:28 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 49ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-04 11:48:32 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 33ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-04 11:48:43 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 44ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-04 11:51:04 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 379ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "    text-align": expected ";", was ": right;"):
+    4: <head>
+    5:     <title>Gun Policy Reform</title>
+    6:     <%= csrf_meta_tags %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9: </head>
+   10: 
+  
+app/assets/stylesheets/_bootstrap-includes.scss:5
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___736756107254846826_70206883330140'
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-04 11:51:10 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 2033ms (Views: 2009.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-04 11:52:23 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 72ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-04 11:52:28 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 49ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-04 11:53:20 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 49ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-04 11:55:09 +1000
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-04 11:55:09 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 53ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/grid" for 127.0.0.1 at 2018-04-04 11:57:55 +1000
+Processing by PagesController#grid as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-04 11:57:55 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 50ms (Views: 24.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-04 11:58:01 +1000
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-04 11:58:01 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 50ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/grid" for 127.0.0.1 at 2018-04-04 11:58:08 +1000
+Processing by PagesController#grid as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-04 11:58:08 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 37ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-04 11:58:14 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qXpr1nSW94UD2UOx9BBGxb/TdthYGKV+Ssb6rLAWGbzQR8iKmuAoOUBGrNxtq02ZPKsDwfeQfDGzCP1J1YeAIQ==", "user"=>{"email"=>"ivorking@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "ivorking@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-04-04 01:58:14.917777"], ["last_sign_in_at", "2018-04-04 01:29:33.310547"], ["sign_in_count", 5], ["updated_at", "2018-04-04 01:58:14.918537"], ["id", 3]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/grid
+Completed 302 Found in 144ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/grid" for 127.0.0.1 at 2018-04-04 11:58:14 +1000
+Processing by PagesController#grid as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/grid.html.erb within layouts/application
+  Rendered pages/grid.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/grid" for 127.0.0.1 at 2018-04-04 11:59:32 +1000
+Processing by PagesController#grid as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/grid.html.erb within layouts/application
+  Rendered pages/grid.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 49ms (Views: 22.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/grid" for 127.0.0.1 at 2018-04-04 11:59:42 +1000
+Processing by PagesController#grid as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/grid.html.erb within layouts/application
+  Rendered pages/grid.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 37ms (Views: 21.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-04 12:04:34 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 43ms (Views: 22.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-04 12:08:46 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 43ms (Views: 26.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2018-04-04 12:08:54 +1000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 42ms (Views: 24.3ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-04 12:09:00 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DomG34xX4Obn4ZD+fqi3TqK1GxhDOYUDzCi9KWjfmJ1FJt1aMKdOIeZ0iXx96vgonnXtuqBSxc8f8o5Tq8ox8w=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-04 12:09:00 +1000
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-04 12:09:00 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 36ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-04 12:09:03 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 36ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-04 12:10:20 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 54ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-04 12:10:22 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 51ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-04 12:12:21 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 52ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
