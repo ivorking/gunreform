@@ -32,6 +32,7 @@ gem 'devise'
 gem 'rails_12factor', :group => :production
 gem 'bootstrap'
 gem 'nokogiri', '~> 1.6', '>= 1.6.7.2'
+gem 'httparty'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

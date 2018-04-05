@@ -42,6 +42,8 @@ class PagesController < ApplicationController
 
   def display_selection
     
+    require 'open-uri'
+
     @name1 = params[:name1].upcase
     if @name1 == nil
       @name1 = "empty"
@@ -70,7 +72,6 @@ class PagesController < ApplicationController
 
     # Site currently uses scrape from opensecrets.org for funding data, and is limited to the US House of Reps. This will be expanded once a suitable API has been chosen.
 
-    require 'open-uri'
     @base_url = 'https://www.politico.com/interactives/2017/gun-lobbying-spending-in-america-congress/'
     @raw_data = Nokogiri::HTML(open( @base_url ))
     @candidate_list = @raw_data.css('td:nth(1)').map &:text

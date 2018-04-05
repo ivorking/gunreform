@@ -10150,3 +10150,96 @@ Processing by PagesController#aboutus as HTML
 Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-06 01:58:02 +1000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (152.6ms)
+Completed 200 OK in 186ms (Views: 178.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-06 01:58:04 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-06 01:58:05 +1000
+Processing by PagesController#selector as HTML
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/display_selection?name1=STEVE&name2=STEVE" for 127.0.0.1 at 2018-04-06 01:58:11 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"STEVE", "name2"=>"STEVE"}
+  [1m[36mPol Load (0.3ms)[0m  [1m[34mSELECT  "pols".* FROM "pols" WHERE "pols"."name_first" = $1 AND "pols"."name_last" = $2 LIMIT $3[0m  [["name_first", "STEVE"], ["name_last", "STEVE"], ["LIMIT", 1]]
+  Rendering pages/display_selection.html.erb within layouts/application
+  Rendered pages/display_selection.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1122ms (Views: 29.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-06 01:58:18 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-06 01:58:24 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 61ms (Views: 33.8ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-06 01:58:44 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QdML2dknmx0vvr2T29n84j2q/iOntsaDIkAynXbaGltKVinQmTpSR6LjJpsquQvJ1NEn8wk7BUZf/HoigV8paQ==", "user"=>{"email"=>"ivorking@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "ivorking@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-04-05 15:58:45.065314"], ["last_sign_in_at", "2018-04-05 15:19:16.100703"], ["sign_in_count", 10], ["updated_at", "2018-04-05 15:58:45.066175"], ["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 136ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-06 01:58:45 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPol Load (0.4ms)[0m  [1m[34mSELECT  "pols".* FROM "pols" INNER JOIN "pols_users" ON "pols"."id" = "pols_users"."pol_id" WHERE "pols_users"."user_id" = $1 AND "pols"."id" = 2 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 43ms (Views: 18.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-06 01:58:49 +1000
+Processing by PagesController#selector as HTML
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/display_selection?name1=Paul&name2=Ryan" for 127.0.0.1 at 2018-04-06 01:58:54 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"Paul", "name2"=>"Ryan"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPol Load (0.4ms)[0m  [1m[34mSELECT  "pols".* FROM "pols" WHERE "pols"."name_first" = $1 AND "pols"."name_last" = $2 LIMIT $3[0m  [["name_first", "PAUL"], ["name_last", "RYAN"], ["LIMIT", 1]]
+  Rendering pages/display_selection.html.erb within layouts/application
+  Rendered pages/display_selection.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 187ms (Views: 42.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-06 01:58:57 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPol Load (0.3ms)[0m  [1m[34mSELECT  "pols".* FROM "pols" INNER JOIN "pols_users" ON "pols"."id" = "pols_users"."pol_id" WHERE "pols_users"."user_id" = $1 AND "pols"."id" = 2 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 29ms (Views: 24.9ms | ActiveRecord: 0.6ms)
+
+
