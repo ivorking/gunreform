@@ -4,7 +4,8 @@
 
 <p>This site has been built to support gun control and law reform efforts in the USA, Australia and South Africa.</p>
 
-<img class="mainpic" src="/assets/march_image.jpg">
+<%# <img class="mainpic" src="/assets/march_image.jpg"> %>
+<%= image_tag("march_image.jpg")%>
 
 <% if @var_selected != nil%>
 <p>The politician you are tracking is: <%= @var_selected %></p>

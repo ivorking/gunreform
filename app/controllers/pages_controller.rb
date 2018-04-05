@@ -54,14 +54,14 @@ class PagesController < ApplicationController
     end 
 
     # @country = Country.find_by :id => params[:id]
-    require 'open-uri'
-    @base_url = 'https://en.wikipedia.org/wiki/'
-    country_name = @country.name.gsub(" ", "_")
-    @wiki_para = Nokogiri::HTML(open( @base_url + country_name )).css('.mw-parser-output p')[0]
+    # require 'open-uri'
+    # @base_url = 'https://en.wikipedia.org/wiki/'
+    # country_name = @country.name.gsub(" ", "_")
+    # @wiki_para = Nokogiri::HTML(open( @base_url + country_name )).css('.mw-parser-output p')[0]
 
-    if @wiki_para.include? "oordinates"
-      @wiki_para = Nokogiri::HTML(open( @base_url + country_name )).css('.mw-parser-output p')[1]
-    end
+    # if @wiki_para.include? "oordinates"
+    #   @wiki_para = Nokogiri::HTML(open( @base_url + country_name )).css('.mw-parser-output p')[1]
+    # end
 
   end
 end
