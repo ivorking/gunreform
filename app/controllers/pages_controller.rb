@@ -1,3 +1,7 @@
+# Gun Law Reform Site
+# by Ivor King, 2018
+# Licence: CC BY
+
 class PagesController < ApplicationController
   def home
   end
@@ -48,6 +52,16 @@ class PagesController < ApplicationController
     else
       @outputmsg = "No match found in the politician database!"
     end 
+
+    # @country = Country.find_by :id => params[:id]
+    require 'open-uri'
+    @base_url = 'https://en.wikipedia.org/wiki/'
+    country_name = @country.name.gsub(" ", "_")
+    @wiki_para = Nokogiri::HTML(open( @base_url + country_name )).css('.mw-parser-output p')[0]
+
+    if @wiki_para.include? "oordinates"
+      @wiki_para = Nokogiri::HTML(open( @base_url + country_name )).css('.mw-parser-output p')[1]
+    end
 
   end
 end

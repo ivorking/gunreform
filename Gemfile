@@ -31,6 +31,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'rails_12factor', :group => :production
 gem 'bootstrap'
+gem 'nokogiri', '~> 1.6', '>= 1.6.7.2'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

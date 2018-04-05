@@ -1,24 +1,15 @@
+# Gun Law Reform Site
+# by Ivor King, 2018
+# Licence: CC BY
+
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is designed to support efforts to reform gun control laws in the USA, Mexico and South Africa. These jurisdictions have relatively high levels of gun related violence.
 
-Things you may want to cover:
+Thanks to the Sydney GA crew for their help and patience getting this app up and running.
 
-* Ruby version
+If you have any feedback, suggestions for improvement, or would like to contribute to this project email ivorking@gmail.com
 
-* System dependencies
+Thanks,
+Ivor.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
