@@ -4,8 +4,8 @@
 <head>
     <title>Gun Law Reform</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
 </head>
 
 <body>
@@ -38,8 +38,7 @@
 
   <div class="main">
 
-    <br />
-    <h3>Gun Law Reform</h3>
+    <h3 class="persistent">Gun Law Reform</h3>
 
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
@@ -53,4 +52,5 @@
   </div>
 
 </body>
+
 </html>

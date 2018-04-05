@@ -10,6 +10,10 @@
 
 <%= image_tag("march_image.jpg", :class => "mainpic") %>
 
+<font color="white"><strong>
 <% if @var_selected != nil%>
-  <p>The politician you are tracking is: <%= @var_selected %></p>
+  <p>The politician you're tracking from the site database is: <%= @var_selected %></p>
+<%elsif @user_check != nil%>
+  <p>The politician you're tracking from the site database is: <%= @user_check[:name_first] %> <%= @user_check[:name_last] %> (<%= @user_check[:party] %>)</p>
 <% end %>
+</strong></font>

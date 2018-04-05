@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   # Uncomment this to force authentication:
   # before_action :authenticate_user!, :reload_route
 
-def reload_route
-  Rails.application.reload_routes!
-end
+  def reload_route
+    Rails.application.reload_routes!
+  end
 
 end

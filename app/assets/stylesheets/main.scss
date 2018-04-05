@@ -12,51 +12,56 @@ $brand-color: lightgrey;
 }
 
 body {
-    @include coloredBG
+    @include coloredBG;
 }
 
 h1 {
     text-align: left;
 }
-  
-.container {
-    max-width: 960px;
+
+main {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.2em;
 }
 
 a {
     color: rgb(27, 31, 248);
 }
 
-.mainpic {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    width: 500px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+nav {
+    list-style: none;
+    margin: 0 5px;
+    padding: 10px;
+    display: flex;
+    background-color: rgb(223, 221, 221);
+    justify-content: space-around;
+    border-radius: 25px;
+    font-family: 'Port Lligat Slab', serif;
 }
 
-.notification {
-    border: 5px solid black;
-    border-radius: 0.5em;
-    text-align: left;
-    background-color: rgba(255,255,255,0.8);
+button {
+    margin-top: 20px;
+    width: 50%;
 }
 
-.error {
-    @extend .notification;
-    color: red;
+input:focus {
+    background-color: rgb(217, 242, 250);
 }
 
-.success {
-    @extend .notification;
-    color: blue;
-    border-color: blue;
+input:not([type="submit"]) {
+    width: 19em;
 }
 
-.loggy {
-    margin-right: 0px;
+input {
+    max-width: 95%;
+}
+
+label {
+    margin-right: 0.1em;
+    display: inline-block;
     text-align: right;
-    font-size: 80%;
+    float: left;
+    width: 111px;
 }
 
 .post {
@@ -87,19 +92,48 @@ a {
     }
 }
 
-nav {
-    list-style: none;
-    margin: 0 5px;
-    padding: 10px;
-    display: flex;
-    background-color: rgb(223, 221, 221);
-    justify-content: space-around;
-    border-radius: 25px;
-    font-family: 'Port Lligat Slab', serif;
+.mainpic {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-button {
-    margin-top: 20px;
+.notification {
+    border: 5px solid black;
+    border-radius: 0.5em;
+    text-align: left;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.error {
+    @extend .notification;
+    color: red;
+}
+
+.persistent {
+    text-shadow: 2px 2px 2px #aaa;
+}
+
+.success {
+    @extend .notification;
+    color: blue;
+    border-color: blue;
+}
+
+.loggy {
+    margin-right: 0px;
+    text-align: right;
+    font-size: 80%;
+}
+
+.container {
+    max-width: 960px;
+}
+
+.formpara {
+    margin: 0.15em;
 }
 
 .cover_font {
@@ -114,36 +148,28 @@ button {
     color: black;
 }
 
-input:focus {
-    background-color: rgb(217, 242, 250);
+.label_signup {
+    margin-right: 0.1em;
+    display: inline-block;
+    text-align: right;
+    float: left;
+    width: 190px;
 }
 
-// Styling to fix forms without bootstrap
-
-main {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 0.2em;
+.label_remember {
+    width: 130px;
 }
 
-.formpara {
-    margin: 0.15em;
+.input_checkbox {
+    max-width: 30px;
+    align-content: left;
 }
 
-input:not([type="submit"]) {
-    width: 15em;
-}
-
-input {
-    max-width: 95%;
-}
-
-label {
-    margin-right: 0.5em;
-}
-
-.right {
-    float: right;
+.boxstyle {
+    width: 19em;
+    display: inline-block;
     margin-top: 2px;
+    margin-left: 8px;
 }
 
 .flex {

@@ -4,6 +4,10 @@
 
 class PagesController < ApplicationController
   def home
+    @user = current_user
+    if @user != nil
+      @user_check = @user.pols.find_by(id: @user)
+    end
   end
 
   def selector 
@@ -37,23 +41,29 @@ class PagesController < ApplicationController
   end
 
   def display_selection
-
+    
     @name1 = params[:name1].upcase
     if @name1 == nil
-      @name1 = "test"
+      @name1 = "empty"
     end
+    
     @name2 = params[:name2].upcase
     if @name2 == nil
-      @name2 = "test"
+      @name2 = "empty"
     end
 
     @name_selected = @name1 + " " + @name2
     @user = current_user
 
     @pol = Pol.find_by(name_first: @name1, name_last: @name2)
+
     if @pol != nil
-      @user.pols << @pol
       @outputmsg = "Match found in the site politician database!"
+      if @user == nil     
+        @outputmsg << " However, you'll need to log in or sign up first to track and save your selection."
+      else
+        @user.pols << @pol
+      end
     else
       @outputmsg = "No match found in the site politician database."
     end 
@@ -67,7 +77,7 @@ class PagesController < ApplicationController
     @funding_list = @raw_data.css('td:nth(2)').map &:text
     @candidate_list.each_with_index do | value, index |
       if @candidate_list[index].upcase == @name_selected
-        @locatormsg = "Match found to gun lobby finance website - US House of Representatives members. Candidate received US #{@funding_list[index]} over the course of their career (as at Oct 2017)."
+        @locatormsg = "Match found to gun lobby finance website - US House of Representatives members. Candidate has received US #{@funding_list[index]} from gun lobby groups over the course of their career (as at Oct 2017)."
       end
     end
   end
