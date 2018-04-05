@@ -44,31 +44,26 @@ class PagesController < ApplicationController
       @name2 = "test"
     end
 
+    @name_selected = @name1 + " " + @name2
     @user = current_user
+
     @pol = Pol.find_by(name_first: @name1, name_last: @name2)
     if @pol != nil
       @user.pols << @pol
-      @outputmsg = "Match found in the politician database!"
+      @outputmsg = "Match found in the site database!"
     else
-      @outputmsg = "No match found in the politician database!"
+      @outputmsg = "No match found in the site database."
     end 
 
-    # @country = Country.find_by :id => params[:id]
-    # require 'open-uri'
-    # @base_url = 'https://en.wikipedia.org/wiki/'
-    # country_name = @country.name.gsub(" ", "_")
-    # @wiki_para = Nokogiri::HTML(open( @base_url + country_name )).css('.mw-parser-output p')[0]
-
-#     require 'open-uri'
-#     @base_url = 'https://www.politico.com/interactives/2017/gun-lobbying-spending-in-america-congress/'
-#     @funding = Nokogiri::HTML(open( @base_url ))
-#     @candidatesn = @funding.xpath('//tbody/tr')
-
-# binding.pry
-
-    # if @wiki_para.include? "oordinates"
-    #   @wiki_para = Nokogiri::HTML(open( @base_url + country_name )).css('.mw-parser-output p')[1]
-    # end
-
+    require 'open-uri'
+    @base_url = 'https://www.politico.com/interactives/2017/gun-lobbying-spending-in-america-congress/'
+    @raw_data = Nokogiri::HTML(open( @base_url ))
+    @candidate_list = @raw_data.css('td:nth(1)').map &:text
+    @funding_list = @raw_data.css('td:nth(2)').map &:text
+    @candidate_list.each_with_index do | value, index |
+      if @candidate_list[index].upcase == @name_selected
+        @locatormsg = "Match found to gun lobby finance website - US House of Representatives members. Candidate received US #{@funding_list[index]} over the course of their career."
+      end
+    end
   end
 end

@@ -7379,3 +7379,229 @@ Processing by PagesController#display_selection as HTML
 Completed 200 OK in 1286016ms (Views: 45.8ms | ActiveRecord: 2.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-05 15:03:48 +1000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (174.9ms)
+Completed 200 OK in 234ms (Views: 197.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/visualiser" for 127.0.0.1 at 2018-04-05 15:03:51 +1000
+Processing by PagesController#visualiser as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/visualiser.html.erb within layouts/application
+  Rendered pages/visualiser.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 35ms (Views: 17.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-05 15:03:52 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 47ms (Views: 16.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pages/display_selection?name1=lkjsdf&name2=sdflkj" for 127.0.0.1 at 2018-04-05 15:03:57 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"lkjsdf", "name2"=>"sdflkj"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPol Load (0.3ms)[0m  [1m[34mSELECT  "pols".* FROM "pols" WHERE "pols"."name_first" = $1 AND "pols"."name_last" = $2 LIMIT $3[0m  [["name_first", "LKJSDF"], ["name_last", "SDFLKJ"], ["LIMIT", 1]]
+  Rendering pages/display_selection.html.erb within layouts/application
+  Rendered pages/display_selection.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 443000ms (Views: 53.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 15:11:35 +1000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (200.8ms)
+Completed 200 OK in 305ms (Views: 240.7ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 15:11:40 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 77ms (Views: 45.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-05 15:11:42 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 84ms (Views: 51.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pages/display_selection?name1=klhhsdf&name2=ksjdfh" for 127.0.0.1 at 2018-04-05 15:11:47 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"klhhsdf", "name2"=>"ksjdfh"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPol Load (0.6ms)[0m  [1m[34mSELECT  "pols".* FROM "pols" WHERE "pols"."name_first" = $1 AND "pols"."name_last" = $2 LIMIT $3[0m  [["name_first", "KLHHSDF"], ["name_last", "KSJDFH"], ["LIMIT", 1]]
+  Rendering pages/display_selection.html.erb within layouts/application
+  Rendered pages/display_selection.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 223922ms (Views: 46.1ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-05 15:15:39 +1000
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 351ms (Views: 260.1ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/pages/display_selection?name1=dsf&name2=dfs" for 127.0.0.1 at 2018-04-05 15:15:45 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"dsf", "name2"=>"dfs"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPol Load (0.6ms)[0m  [1m[34mSELECT  "pols".* FROM "pols" WHERE "pols"."name_first" = $1 AND "pols"."name_last" = $2 LIMIT $3[0m  [["name_first", "DSF"], ["name_last", "DFS"], ["LIMIT", 1]]
+  Rendering pages/display_selection.html.erb within layouts/application
+  Rendered pages/display_selection.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3413750ms (Views: 18.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:12:49 +1000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/ivor/Repos/gunreform/app/controllers/pages_controller.rb:63: syntax error, unexpected ',', expecting keyword_end
+_list.each_with_index | index, value |
+                              ^
+/home/ivor/Repos/gunreform/app/controllers/pages_controller.rb:69: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/pages_controller.rb:63: syntax error, unexpected ',', expecting keyword_end
+app/controllers/pages_controller.rb:69: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:13:23 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (166.3ms)
+Completed 200 OK in 231ms (Views: 194.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-05 16:14:17 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/display_selection?name1=Paul&name2=Ryan" for 127.0.0.1 at 2018-04-05 16:14:34 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"Paul", "name2"=>"Ryan"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPol Load (0.2ms)[0m  [1m[34mSELECT  "pols".* FROM "pols" WHERE "pols"."name_first" = $1 AND "pols"."name_last" = $2 LIMIT $3[0m  [["name_first", "PAUL"], ["name_last", "RYAN"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 2266ms (ActiveRecord: 2.2ms)
+
+
+  
+NoMethodError (undefined method `each_with_index' for nil:NilClass):
+  
+app/controllers/pages_controller.rb:63:in `display_selection'
+Started PUT "/__web_console/repl_sessions/039ec029db672a4347aa6d24eb7dcf02" for 127.0.0.1 at 2018-04-05 16:14:55 +1000
+Started PUT "/__web_console/repl_sessions/039ec029db672a4347aa6d24eb7dcf02" for 127.0.0.1 at 2018-04-05 16:14:59 +1000
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:15:29 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 41ms (Views: 15.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-05 16:15:31 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 43ms (Views: 16.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pages/display_selection?name1=Paul&name2=Ryan" for 127.0.0.1 at 2018-04-05 16:15:37 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"Paul", "name2"=>"Ryan"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPol Load (0.1ms)[0m  [1m[34mSELECT  "pols".* FROM "pols" WHERE "pols"."name_first" = $1 AND "pols"."name_last" = $2 LIMIT $3[0m  [["name_first", "PAUL"], ["name_last", "RYAN"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 633ms (ActiveRecord: 1.5ms)
+
+
+  
+NameError (undefined local variable or method `candidate_list' for #<PagesController:0x007fb3fc09f418>
+Did you mean?  @candidate_list):
+  
+app/controllers/pages_controller.rb:64:in `block in display_selection'
+app/controllers/pages_controller.rb:63:in `each'
+app/controllers/pages_controller.rb:63:in `each_with_index'
+app/controllers/pages_controller.rb:63:in `display_selection'
+Started PUT "/__web_console/repl_sessions/a9fa626a9e25dfa08a17b2c288ab1306" for 127.0.0.1 at 2018-04-05 16:15:47 +1000
+Started PUT "/__web_console/repl_sessions/a9fa626a9e25dfa08a17b2c288ab1306" for 127.0.0.1 at 2018-04-05 16:15:49 +1000
+Started PUT "/__web_console/repl_sessions/a9fa626a9e25dfa08a17b2c288ab1306" for 127.0.0.1 at 2018-04-05 16:16:06 +1000
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:16:24 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 54ms (Views: 29.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-05 16:16:26 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 34ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/display_selection?name1=Paul&name2=Ryan" for 127.0.0.1 at 2018-04-05 16:16:31 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"Paul", "name2"=>"Ryan"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPol Load (0.1ms)[0m  [1m[34mSELECT  "pols".* FROM "pols" WHERE "pols"."name_first" = $1 AND "pols"."name_last" = $2 LIMIT $3[0m  [["name_first", "PAUL"], ["name_last", "RYAN"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 426ms (ActiveRecord: 1.4ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/pages_controller.rb:64:in `[]'
+app/controllers/pages_controller.rb:64:in `block in display_selection'
+app/controllers/pages_controller.rb:63:in `each'
+app/controllers/pages_controller.rb:63:in `each_with_index'
+app/controllers/pages_controller.rb:63:in `display_selection'
+Started PUT "/__web_console/repl_sessions/db17813b8769f2840a88a30f67fce2d9" for 127.0.0.1 at 2018-04-05 16:16:47 +1000
+Started PUT "/__web_console/repl_sessions/db17813b8769f2840a88a30f67fce2d9" for 127.0.0.1 at 2018-04-05 16:16:50 +1000
+Started PUT "/__web_console/repl_sessions/db17813b8769f2840a88a30f67fce2d9" for 127.0.0.1 at 2018-04-05 16:16:55 +1000
+Started PUT "/__web_console/repl_sessions/db17813b8769f2840a88a30f67fce2d9" for 127.0.0.1 at 2018-04-05 16:17:02 +1000
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:17:29 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 44ms (Views: 17.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-05 16:17:32 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/display_selection?name1=Paul&name2=Ryan" for 127.0.0.1 at 2018-04-05 16:17:37 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"Paul", "name2"=>"Ryan"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPol Load (0.4ms)[0m  [1m[34mSELECT  "pols".* FROM "pols" WHERE "pols"."name_first" = $1 AND "pols"."name_last" = $2 LIMIT $3[0m  [["name_first", "PAUL"], ["name_last", "RYAN"], ["LIMIT", 1]]
+  Rendering pages/display_selection.html.erb within layouts/application
+  Rendered pages/display_selection.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 496ms (Views: 32.6ms | ActiveRecord: 2.3ms)
+
+
