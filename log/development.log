@@ -7277,3 +7277,55 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 275ms (Views: 238.2ms | ActiveRecord: 3.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-05 12:59:44 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 20.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 13:01:15 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 40ms (Views: 18.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 13:02:43 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/home/ivor/Repos/gunreform/app/views/pages/home.html.erb:7: syntax error, unexpected ',', expecting ')'
+ image_tag("march_image.jpg"), :class => "mainpic");@output_
+                              ^):
+  
+app/views/pages/home.html.erb:7: syntax error, unexpected ',', expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-04-05 13:04:20 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/ivor/Repos/gunreform/app/views/pages/home.html.erb:7: syntax error, unexpected ',', expecting ')'
+ image_tag("march_image.jpg"), :class => "mainpic" );@output
+                              ^):
+  
+app/views/pages/home.html.erb:7: syntax error, unexpected ',', expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-04-05 13:06:13 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 44ms (Views: 20.0ms | ActiveRecord: 0.5ms)
+
+
