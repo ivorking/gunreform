@@ -1,7 +1,7 @@
 // Variables
 $brand-color: lightgrey;
 
-// Mixins (like functions)
+// Mixins
 @mixin coloredBG {
     background-color: $brand-color;
 }
@@ -21,7 +21,6 @@ h1 {
   
 .container {
     max-width: 960px;
-    // margin: 0 auto;
 }
 
 a {
@@ -47,6 +46,7 @@ a {
     @extend .notification;
     color: red;
 }
+
 .success {
     @extend .notification;
     color: blue;
@@ -116,4 +116,43 @@ button {
 
 input:focus {
     background-color: rgb(217, 242, 250);
+}
+
+// Styling to fix forms without bootstrap
+
+main {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.2em;
+}
+
+.formpara {
+    margin: 0.15em;
+}
+
+input:not([type="submit"]) {
+    width: 15em;
+}
+
+input {
+    max-width: 95%;
+}
+
+label {
+    margin-right: 0.5em;
+}
+
+.right {
+    float: right;
+    margin-top: 2px;
+}
+
+.flex {
+    display: flex;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
 }
