@@ -59,6 +59,13 @@ class PagesController < ApplicationController
     # country_name = @country.name.gsub(" ", "_")
     # @wiki_para = Nokogiri::HTML(open( @base_url + country_name )).css('.mw-parser-output p')[0]
 
+#     require 'open-uri'
+#     @base_url = 'https://www.politico.com/interactives/2017/gun-lobbying-spending-in-america-congress/'
+#     @funding = Nokogiri::HTML(open( @base_url ))
+#     @candidatesn = @funding.xpath('//tbody/tr')
+
+# binding.pry
+
     # if @wiki_para.include? "oordinates"
     #   @wiki_para = Nokogiri::HTML(open( @base_url + country_name )).css('.mw-parser-output p')[1]
     # end
