@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/visualiser' => 'pages#visualiser'
   get '/campaign' => 'pages#campaign'
   get '/donations' => 'pages#donations'
+  get '/secondamend' => 'pages#secondamend'
   get '/library' => 'pages#library'
   get '/links' => 'pages#links'
   get '/news' => 'pages#news'

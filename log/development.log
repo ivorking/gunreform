@@ -7630,3 +7630,73 @@ Processing by PagesController#selector as HTML
 Completed 200 OK in 27ms (Views: 16.1ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:52:42 +1000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (142.1ms)
+Completed 500 Internal Server Error in 360ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `secondamend' for #<#<Class:0x00556d23bb33d0>:0x00556d23b7efe0>):
+    27:           <%= link_to 'Select Politician', selector_path %>
+    28:           <%= link_to 'Funding Visualiser', visualiser_path %>
+    29:           <%= link_to 'Campaign Engine', campaign_path %>
+    30:           <%= link_to 'Second Amendment (USA)', secondamend %>
+    31:           <%= link_to 'Donate', donations_path %>
+    32:           <%= link_to 'Library', library_path %>
+    33:           <%= link_to 'Links', links_path %>
+  
+app/views/layouts/application.html.erb:30:in `_app_views_layouts_application_html_erb__1695697131462002853_46963616058140'
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:54:26 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 77ms (Views: 36.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/secondamend" for 127.0.0.1 at 2018-04-05 16:54:29 +1000
+Processing by PagesController#secondamend as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/secondamend.html.erb within layouts/application
+  Rendered pages/secondamend.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 40ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:54:34 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 58ms (Views: 24.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/visualiser" for 127.0.0.1 at 2018-04-05 16:54:39 +1000
+Processing by PagesController#visualiser as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/visualiser.html.erb within layouts/application
+  Rendered pages/visualiser.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 42ms (Views: 15.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-05 16:54:41 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 46ms (Views: 19.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pages/display_selection?name1=Paul&name2=Ryan" for 127.0.0.1 at 2018-04-05 16:54:46 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"Paul", "name2"=>"Ryan"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPol Load (0.2ms)[0m  [1m[34mSELECT  "pols".* FROM "pols" WHERE "pols"."name_first" = $1 AND "pols"."name_last" = $2 LIMIT $3[0m  [["name_first", "PAUL"], ["name_last", "RYAN"], ["LIMIT", 1]]
+  Rendering pages/display_selection.html.erb within layouts/application
+  Rendered pages/display_selection.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1236ms (Views: 35.5ms | ActiveRecord: 2.2ms)
+
+

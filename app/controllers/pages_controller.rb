@@ -15,6 +15,9 @@ class PagesController < ApplicationController
   def campaign
   end
 
+  def secondamend
+  end
+
   def donations
   end
 
