@@ -7700,3 +7700,29 @@ Processing by PagesController#display_selection as HTML
 Completed 200 OK in 1236ms (Views: 35.5ms | ActiveRecord: 2.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:07:59 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 52ms (Views: 23.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/selector" for 127.0.0.1 at 2018-04-05 17:23:33 +1000
+Processing by PagesController#selector as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/selector.html.erb within layouts/application
+  Rendered pages/selector.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 16.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/display_selection?name1=paul&name2=ryan" for 127.0.0.1 at 2018-04-05 17:23:38 +1000
+Processing by PagesController#display_selection as HTML
+  Parameters: {"name1"=>"paul", "name2"=>"ryan"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPol Load (0.1ms)[0m  [1m[34mSELECT  "pols".* FROM "pols" WHERE "pols"."name_first" = $1 AND "pols"."name_last" = $2 LIMIT $3[0m  [["name_first", "PAUL"], ["name_last", "RYAN"], ["LIMIT", 1]]
+  Rendering pages/display_selection.html.erb within layouts/application
+  Rendered pages/display_selection.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1119ms (Views: 29.5ms | ActiveRecord: 1.6ms)
+
+
