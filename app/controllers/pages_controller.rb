@@ -60,14 +60,14 @@ class PagesController < ApplicationController
     @pol = Pol.find_by(name_first: @name1, name_last: @name2)
 
     if @pol != nil
-      @outputmsg = "Match found in the site politician database!"
+      @outputmsg = "Match found in the database!"
       if @user == nil     
         @outputmsg << " However, you'll need to log in or sign up first to track and save your selection."
       else
         @user.pols << @pol
       end
     else
-      @outputmsg = "No match found in the site politician database."
+      @outputmsg = "No match found in the database."
     end 
 
     # Site currently uses scrape from opensecrets.org for funding data, and is limited to the US House of Reps. This will be expanded once the op9ensecrets.org API is in use.

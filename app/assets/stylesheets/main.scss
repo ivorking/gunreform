@@ -1,5 +1,5 @@
 // Variables
-$brand-color: lightgrey;
+$brand-color: rgb(230, 229, 229);
 
 // Mixins
 @mixin coloredBG {
@@ -113,7 +113,7 @@ label {
 }
 
 .persistent {
-    text-shadow: 2px 2px 2px #aaa;
+    text-shadow: 2px 2px 6px #5f5c5c;
 }
 
 .success {

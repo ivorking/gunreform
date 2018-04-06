@@ -1,5 +1,6 @@
-<% if @current_user.present? %>
-  Welcome back <%= @current_user.email %>
+<% if @current_user.present? && @displayed_msg_flag != true %>
+    Welcome back <%= @current_user.email %>
+    <% @displayed_msg_flag = true%>
 <% end %>
 
 <p>This site has been built to support gun control and law reform efforts in the USA, Mexico, Australia and South Africa.</p>
@@ -10,10 +11,10 @@
 
 <%= image_tag("march_image.jpg", :class => "mainpic") %>
 
-<font color="white"><strong>
+<font color="FF8000"><strong>
 <% if @var_selected != nil%>
-  <p>The politician you're tracking from the site database is: <%= @var_selected %></p>
+  <p>The politician you're tracking from the database is: <%= @var_selected %></p>
 <%elsif @user_check != nil%>
-  <p>The politician you're tracking from the site database is: <%= @user_check[:name_first] %> <%= @user_check[:name_last] %> (<%= @user_check[:party] %>)</p>
+  <p>The politician you're tracking from the database is: <%= @user_check[:name_first] %> <%= @user_check[:name_last] %> (<%= @user_check[:party] %>)</p>
 <% end %>
 </strong></font>
