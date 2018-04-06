@@ -70,7 +70,7 @@ class PagesController < ApplicationController
       @outputmsg = "No match found in the site politician database."
     end 
 
-    # Site currently uses scrape from opensecrets.org for funding data, and is limited to the US House of Reps. This will be expanded once a suitable API has been chosen.
+    # Site currently uses scrape from opensecrets.org for funding data, and is limited to the US House of Reps. This will be expanded once the op9ensecrets.org API is in use.
 
     @base_url = 'https://www.politico.com/interactives/2017/gun-lobbying-spending-in-america-congress/'
     @raw_data = Nokogiri::HTML(open( @base_url ))
@@ -78,7 +78,7 @@ class PagesController < ApplicationController
     @funding_list = @raw_data.css('td:nth(2)').map &:text
     @candidate_list.each_with_index do | value, index |
       if @candidate_list[index].upcase == @name_selected
-        @locatormsg = "Match found to gun lobby finance website - US House of Representatives members. Candidate has received US #{@funding_list[index]} from gun lobby groups over the course of their career (as at Oct 2017)."
+        @locatormsg = "Match found to gun lobby finance website - US House of Representatives members. Candidate has received US #{@funding_list[index]} from gun lobby groups over the course of their career (from 1990, as at Oct 2017)."
       end
     end
   end
