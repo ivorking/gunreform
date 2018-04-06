@@ -13,9 +13,11 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #3a3a3a;
     overflow-x: hidden;
     padding-top: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url("gunpic.png");
+    background-size: 100%;
 }
 
 .sidenav a {
@@ -24,6 +26,7 @@ body {
     font-size: 16px;
     color:white;
     display: block;
+    font-weight: bold;
 }
 
 .sidenav a:hover {
